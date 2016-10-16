@@ -1,0 +1,52 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="alphabetLength" class="col-sm-6 control-label">Alphabet length (k):</label>
+    <div class="col-sm-6">
+      <input
+        [(ngModel)]="alphabetLength"
+        type="number"
+        class="form-control"
+        id="alphabetLength"
+        name="alphabetLength"
+        min="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-6 control-label">Probability type:</label>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label>
+          <input
+            [(ngModel)]="probabilityType"
+            type="radio"
+            name="ProbabilityType"
+            id="ProbabilityTypeEqual"
+            value="equal">
+          Equal
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            [(ngModel)]="probabilityType"
+            type="radio"
+            name="ProbabilityType"
+            id="ProbabilityTypeRule"
+            value="rule">
+          (1/2)<sup>i</sup>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            [(ngModel)]="probabilityType"
+            type="radio"
+            name="ProbabilityType"
+            id="ProbabilityTypeRandom"
+            value="random">
+          Random
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
