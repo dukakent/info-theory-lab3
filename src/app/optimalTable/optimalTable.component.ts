@@ -3,17 +3,17 @@ import { Component, Input } from '@angular/core';
 import { EntropyService } from '../entropy/entropy.service';
 
 @Component({
-  selector:     'optimalTable',
+  selector:     'optimal-table',
   templateUrl:  './optimalTable.component.html',
   styleUrls:    [
-                  './optimalTable.component.css'
+                  //'./optimalTable.component.css'
                 ]
 })
-export class MatrixComponent {
+export class OptimalTableComponent {
 
   private entropy: EntropyService;
 
-  constructor (EntropyService: EntropyService) {
-    this.entropy = EntropyService;
+  constructor (entropy: EntropyService) {
+    this.entropy = entropy;
   }
 }

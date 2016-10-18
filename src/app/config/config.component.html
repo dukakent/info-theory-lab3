@@ -3,7 +3,8 @@
     <label for="alphabetLength" class="col-sm-6 control-label">Alphabet length (k):</label>
     <div class="col-sm-6">
       <input
-        [(ngModel)]="alphabetLength"
+        [ngModel]="alphabetLength"
+        (change)="alphabetLength=$event.target.value"
         type="number"
         class="form-control"
         id="alphabetLength"

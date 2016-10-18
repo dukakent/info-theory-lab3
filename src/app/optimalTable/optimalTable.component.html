@@ -1,0 +1,7 @@
+<table class="table">
+  <tr *ngFor="let symbol of entropy.alphabet">
+    <td>{{ symbol.name }}</td>
+    <td>{{ symbol.p.toFixed(3) }}</td>
+    <td>{{ symbol.t }}</td>
+  </tr>
+</table>

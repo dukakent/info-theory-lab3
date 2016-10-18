@@ -4,8 +4,8 @@ import { Symbol } from '../symbol/symbol.model';
 @Injectable()
 export class EntropyService {
 
-  private alphabet: Symbol[];
-  private probType: string;
+  public alphabet: Symbol[] = Array();
+  public probType: string;
 
   private probUpdater = {
     'equal': () => {
@@ -35,7 +35,7 @@ export class EntropyService {
     }
   };
 
-  constructor() {  }
+  constructor() {}
 
   private pushSymbol(): void {
     let number = this.alphabet.length + 1;
@@ -45,7 +45,7 @@ export class EntropyService {
   }
 
   public setLength(kNew): void {
-    let kOld = this.alphabet.length || 0;
+    let kOld = this.alphabet.length;
 
     if (kNew <= kOld) {
       this.alphabet.length = kNew;
