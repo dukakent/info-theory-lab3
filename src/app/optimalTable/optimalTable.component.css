@@ -1,0 +1,13 @@
+.code-bit {
+  padding: 2px 5px;
+  margin: -8px 0;
+  font-weight: bold;
+}
+
+.code-bit[data-val="0"] {
+  background: #ddddff;
+}
+
+.code-bit[data-val="1"] {
+  background: #ddffdd;
+}

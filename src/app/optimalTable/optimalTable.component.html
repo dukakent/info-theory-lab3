@@ -1,7 +1,34 @@
 <table class="table">
-  <tr *ngFor="let symbol of entropy.alphabet">
-    <td>{{ symbol.name }}</td>
-    <td>{{ symbol.p.toFixed(3) }}</td>
-    <td>{{ symbol.t }}</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>
+        Symbol name:
+      </th>
+      <th>
+        Probability:
+      </th>
+      <th>
+        Code:
+      </th>
+      <th>
+        Sending time:
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let symbol of entropy.sortedAlphabet">
+      <td>{{ symbol.name }}</td>
+      <td>{{ symbol.p.toFixed(3) }}</td>
+      <td>
+        <span *ngFor="let bit of symbol.code">
+          <span
+            class="code-bit"
+            attr.data-val="{{ bit }}">
+            {{ bit }}
+          </span>
+        </span>
+      </td>
+      <td>{{ symbol.t }}</td>
+    </tr>
+  </tbody>
 </table>

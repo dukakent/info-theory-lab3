@@ -39,6 +39,6 @@ export class ConfigComponent {
 
   set probabilityType(value) {
     this._probabilityType = value;
-    this.entropy.updateProb(value);
+    this.entropy.update(value);
   }
 }

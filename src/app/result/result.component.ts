@@ -1,15 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { EntropyService } from '../entropy/entropy.service';
 
 @Component({
-  selector:     'optimal-table',
-  templateUrl:  './optimalTable.component.html',
+  selector:     'result',
+  templateUrl:  './result.component.html',
   styleUrls:    [
-                  './optimalTable.component.css'
+                  // './result.component.css'
                 ]
 })
-export class OptimalTableComponent {
+export class ResultComponent {
 
   private entropy: EntropyService;
 
